@@ -1,0 +1,58 @@
+.button {
+  display         : inline-flex;
+  justify-content : center;
+  align-items     : center;
+  font-family     : "Martin Mono", monospace;
+  font-size       : 1rem;
+  font-weight     : 600;
+  line-height     : 130%;
+  letter-spacing  : -0.0625rem;
+  border-radius   : 0.5rem;
+
+  @include breakpoint(small) {
+    font-size : 1.125rem;
+  }
+
+  &:hover {
+    cursor : pointer;
+  }
+
+  &--black-outline {
+    color            : $clr-neutral-900;
+    background-color : $clr-light-salmon-50;
+    border           : 2px solid $clr-neutral-900;
+
+    &:hover {
+      background : $clr-gradient;
+    }
+
+    &:focus {
+      outline : 4px double $clr-neutral-700;
+    }
+  }
+
+  &--white-outline {
+    color            : $clr-neutral-100;
+    background-color : transparent;
+    border           : 2px solid $clr-neutral-100;
+
+    &:hover {
+      background : $clr-gradient-dark;
+    }
+
+    &:focus {
+      outline : 4px double $clr-neutral-100;
+    }
+  }
+
+  &--md {
+    gap     : 1rem;
+    padding : 1.25rem 0;
+    width   : 100%;
+
+    @include breakpoint(small) {
+      padding : 1.25rem 1.5rem;
+      width   : unset;
+    }
+  }
+}

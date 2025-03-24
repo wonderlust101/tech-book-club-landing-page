@@ -1,0 +1,11 @@
+.testimonial {
+  display : grid;
+  gap     : 2rem;
+
+  @include breakpoint(medium) {
+    justify-self  : center;
+    justify-items : center;
+    text-align    : center;
+    max-width     : 60rem;
+  }
+}

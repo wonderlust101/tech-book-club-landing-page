@@ -1,0 +1,106 @@
+@use "../abstract/index" as a;
+
+// Global Styles
+* {
+  font-family : "Inter", sans-serif;
+}
+
+// Heading Styles
+.heading-xl {
+  font-family    : "Martin Mono", monospace;
+  font-size      : 2.375rem;
+  line-height    : 120%;
+  letter-spacing : -0.125rem;
+
+  @include a.breakpoint(small) {
+    font-size : 3.875rem;
+  }
+}
+
+.heading-lg {
+  font-family    : "Martin Mono", monospace;
+  font-size      : 2.125rem;
+  line-height    : 130%;
+  letter-spacing : -0.125rem;
+
+  @include a.breakpoint(small) {
+    font-size : 3.125rem;
+  }
+}
+
+.heading-md {
+  font-family    : "Martin Mono", monospace;
+  font-size      : 1.5rem;
+  line-height    : 110%;
+  letter-spacing : -0.0625rem;
+
+  @include a.breakpoint(small) {
+    font-size      : 2.125rem;
+    line-height    : 130%;
+    letter-spacing : -0.0625rem;
+  }
+}
+
+.heading-sm {
+  font-family    : "Martin Mono", monospace;
+  font-size      : 1.5rem;
+  line-height    : 110%;
+  letter-spacing : -0.0625rem;
+}
+
+// Text Styles
+.text-md {
+  font-family    : "Inter", sans-serif;
+  font-size      : 1.25rem;
+  line-height    : 140%;
+  letter-spacing : -0.03125rem;
+}
+
+.text-sm {
+  font-family    : "Martin Mono", monospace;
+  font-size      : 1rem;
+  line-height    : 130%;
+  letter-spacing : -0.03125rem;
+
+  @include a.breakpoint(small) {
+    font-size : 1.125rem;
+  }
+}
+
+.text-xs {
+  font-family    : "Martin Mono", monospace;
+  font-size      : 0.875rem;
+  line-height    : 120%;
+  letter-spacing : -0.0625rem;
+}
+
+// Text Colors
+.text-white-100 { color : a.$clr-neutral-100;}
+.text-black-700 { color : a.$clr-neutral-700;}
+.text-black-900 { color : a.$clr-neutral-900;}
+
+.text-gradient {
+  background              : a.$clr-text-gradient;
+  -webkit-background-clip : text;
+  -webkit-text-fill-color : transparent;
+}
+
+// Font Weight
+.bold {font-weight : 700;}
+.semi-bold {font-weight : 600;}
+.medium {font-weight : 500;}
+.light {font-weight : 300;}
+
+// Font Style
+.italic {font-style : italic;}
+.normal {font-style : normal;}
+
+// Text Alignment
+.text-left {text-align : left;}
+.text-center {text-align : center;}
+.text-right {text-align : right;}
+
+// Text Transformation
+.uppercase {text-transform : uppercase;}
+.lowercase {text-transform : lowercase;}
+.capitalize {text-transform : capitalize;}

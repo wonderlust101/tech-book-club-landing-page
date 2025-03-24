@@ -1,0 +1,14 @@
+.home {
+  display       : grid;
+  align-content : flex-start;
+  row-gap       : 4rem;
+  min-height    : 100vh;
+
+  @include breakpoint(small) {
+    row-gap : 5rem;
+  }
+
+  @include breakpoint(small) {
+    row-gap : 7.5rem;
+  }
+}

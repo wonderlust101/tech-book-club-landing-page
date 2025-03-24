@@ -1,0 +1,70 @@
+.steps {
+  display       : grid;
+  gap           : 2rem;
+  padding       : 4rem 1rem;
+  background    : url("/images/pattern-light-bg.svg") top center repeat, url("/images/pattern-glow.svg") left 10% top 7.5rem no-repeat $clr-light-salmon-50;
+  border-radius : 0.5rem;
+
+  @include breakpoint(medium) {
+    background : url("/images/pattern-light-bg.svg") top center repeat, url("/images/pattern-glow.svg") right -20rem top -4rem no-repeat $clr-light-salmon-50;
+
+  }
+
+  @include breakpoint(medium) {
+    justify-items : center;
+    gap           : 4rem;
+    padding       : 4rem;
+  }
+
+  &__header {
+    @include breakpoint(medium) {
+      max-width  : 32rem;
+      text-align : center;
+    }
+  }
+
+  &__steps {
+    display : grid;
+    gap     : 2rem;
+
+    @include breakpoint(medium) {
+      grid-auto-flow : column;
+    }
+  }
+
+  &__step {
+    display  : grid;
+    gap      : 1.25rem;
+    position : relative;
+
+    @include breakpoint(medium) {
+      gap : 1.5rem;
+    }
+  }
+
+  &__arrow {
+    display : none;
+
+    @include breakpoint(medium) {
+      display  : block;
+      position : absolute;
+      top      : 0;
+      right    : 0;
+    }
+  }
+
+  &__number {
+    display       : grid;
+    align-items   : center;
+    justify-items : center;
+    height        : 2rem;
+    width         : 2rem;
+    border        : 2px solid $clr-neutral-900;
+    border-radius : 0.25rem;
+
+    @include breakpoint(medium) {
+      height : 2.5rem;
+      width  : 2.5rem;
+    }
+  }
+}

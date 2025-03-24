@@ -1,0 +1,59 @@
+.footer {
+  background    : url("/images/pattern-dark-bg.svg") top center repeat $clr-neutral-900;
+  margin-top    : 4rem;
+  padding       : 3rem 0 0;
+  border-radius : 1rem 1rem 0 0;
+  overflow      : hidden;
+
+  @include breakpoint(small) {
+    margin-top : 5rem;
+  }
+
+  @include breakpoint(medium) {
+    margin-top : 7.5rem;
+  }
+
+  &__content {
+    display : grid;
+    gap     : 4rem;
+  }
+
+  &__main-content {
+    display : grid;
+    gap     : 2.5rem;
+
+    @include breakpoint(medium) {
+      justify-content : center;
+      h2 {
+        max-width : 42rem;
+      }
+    }
+  }
+
+  &__sub-content {
+    display    : grid;
+    gap        : 1rem;
+    padding    : 1.5rem 2rem;
+    border-top : 1px solid $clr-neutral-700;
+
+    @include breakpoint(medium) {
+      display         : flex;
+      justify-content : space-between;
+    }
+  }
+
+  &__links {
+    display         : flex;
+    justify-content : center;
+    gap             : 1.5rem;
+  }
+
+  &__links-icon {
+    height : 1.5rem;
+    width  : 1.5rem;
+
+    &:hover {
+      opacity : 0.6;
+    }
+  }
+}

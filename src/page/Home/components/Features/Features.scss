@@ -1,0 +1,81 @@
+.features {
+  display : grid;
+  gap     : 2.5rem;
+
+  @include breakpoint(medium) {
+    grid-template-columns : 1fr 1fr;
+    align-items           : center;
+    gap                   : 5rem;
+
+    &:nth-of-type(2) {
+      & > :first-child {
+        order : 1;
+      }
+    }
+  }
+
+  &__text {
+    display : grid;
+    gap     : 1.5rem;
+
+    @include breakpoint(small) {
+      gap : 2.25rem;
+    }
+
+    @include breakpoint(medium) {
+      max-width : 33rem;
+    }
+  }
+
+  &__list {
+    display : grid;
+    gap     : 1rem;
+
+    @include breakpoint(small) {
+      gap : 1.5rem;
+    }
+  }
+
+  &__list-item {
+    display : flex;
+    gap     : 1rem;
+  }
+
+  &__club {
+    display  : inline;
+    position : relative;
+    width    : min-content;
+
+    &:before {
+      content         : "";
+      position        : absolute;
+      top             : 0;
+      left            : -0.75rem;
+      height          : 130%;
+      width           : 130%;
+      background      : url("/images/pattern-circle.png") no-repeat;
+      background-size : contain;
+    }
+  }
+
+  &__book-club-image {
+    position : relative;
+  }
+
+  &__tech-logos {
+    display : none;
+
+    @include breakpoint(small) {
+      display  : block;
+      position : absolute;
+      right    : 3.25rem;
+      bottom   : 3.25rem;
+      z-index  : 1;
+    }
+
+    @include breakpoint(medium) {
+      left   : -4rem;
+      bottom : 3.25rem;
+    }
+  }
+}

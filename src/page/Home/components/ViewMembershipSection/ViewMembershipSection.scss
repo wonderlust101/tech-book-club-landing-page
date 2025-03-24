@@ -1,0 +1,23 @@
+.view-membership-section {
+  display : grid;
+  gap     : 1.5rem;
+
+  @include breakpoint(small) {
+    justify-items : flex-start;
+  }
+
+  &__avatar {
+    display     : flex;
+    align-items : center;
+    gap         : 0.75rem;
+  }
+
+  &__avatar-image {
+    width : 7rem;
+  }
+
+  &__ratings {
+    display : grid;
+    gap     : 0.25rem;
+  }
+}

@@ -1,0 +1,30 @@
+.home-hero {
+  grid-column : 1/-1 !important;
+  background  : url("/images/pattern-light-bg.svg") top center repeat, url("/images/pattern-glow.svg") left bottom -40rem no-repeat $clr-light-salmon-50;
+
+  &__content {
+    grid-column : 1/-1;
+    display     : grid;
+    row-gap     : 4rem;
+    padding     : 6.75rem 0 5rem;
+
+    @include breakpoint(small) {
+      padding : 8.25rem 0 5rem;
+    }
+
+    @include breakpoint(medium) {
+      padding               : 9.25rem 0 5rem;
+      grid-template-columns : 1fr 1fr;
+      column-gap            : 4rem;
+    }
+  }
+
+  &__main-content {
+    display : grid;
+    gap     : 2rem;
+
+    @include breakpoint(medium) {
+      align-content : center;
+    }
+  }
+}

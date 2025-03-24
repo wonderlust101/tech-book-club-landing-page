@@ -1,0 +1,77 @@
+.membership {
+  display : grid;
+  gap     : 1.5rem;
+
+  @include breakpoint(medium) {
+    gap : 4.5rem;
+
+    h2 {
+      text-align : center;
+    }
+  }
+
+  &__cards {
+    display : grid;
+    gap     : 1.5rem;
+
+    @include breakpoint(small) {
+      grid-template-columns : 1fr 1fr;
+    }
+
+    @include breakpoint(medium) {
+      grid-template-columns : 1fr 1.25fr 1fr;
+      justify-self          : center;
+      align-items           : center;
+      max-width             : 60rem;
+    }
+  }
+
+  &__card {
+    display       : grid;
+    gap           : 2rem;
+    padding       : 1.5rem;
+    border        : 1px solid $clr-neutral-200;
+    border-radius : 0.5rem;
+    align-items   : flex-start;
+
+    &:nth-child(2n) {
+      background : url("/images/pattern-glow.svg") left 25% top -5rem no-repeat $clr-light-salmon-50;
+
+      @include breakpoint(medium) {
+        height : 110%;
+      }
+    }
+  }
+
+  &__card-main-content {
+    display : grid;
+    gap     : 1.5rem;
+  }
+
+  &__price {
+    display     : flex;
+    align-items : center;
+    gap         : 0.5rem;
+  }
+
+  &__divider {
+    color : $clr-neutral-200;
+    width : 100%;
+  }
+
+  &__checkmark {
+    height : 1.5rem;
+    width  : 1.5rem;
+  }
+
+  &__features {
+    display : grid;
+    gap     : 1rem;
+  }
+
+  &__feature {
+    display     : flex;
+    align-items : center;
+    gap         : 0.75rem;
+  }
+}
